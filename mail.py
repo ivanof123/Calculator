@@ -16,7 +16,12 @@ sale = DT.datetime.strptime(data_sale, '%d/%m/%Y').date()
 
 years = years_between_dates(pay, sale)  # получил полных лет между датами приобретения и продажи
 
-#print(f'Вы владели имуществом {years} gjkys[ года')
+# print(f'Вы владели имуществом {years} полных года')
+
+if years >= 3:
+    print('Вы владели имуществом более 3 лет, доход освобождается от налогообложения')
+else:
+    print('Доход подлежит налогообложению')
 
 # delta = sale - pay
 # print(f'Вы владели имуществом {delta.days} дней')
